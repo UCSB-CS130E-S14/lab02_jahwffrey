@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Arduino Demo</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		
+		<!-- Only way i could get the arduino to draw: -->
+		<script>
+			ardImage = document.getElementById("ardPic");
+			function go(){
+				var can = document.getElementById("arduinoPic");
+				var canX = can.getContext("2d");
+				var ardImage = document.getElementById("ardPic");
+				canX.drawImage(ardImage,0,0,332,466);//,663,931);
+			}
+		</script>
+		<script src="code.js"></script>
+	</head>
+	<body>
+		<div id = "container">
+			<img id = "ardPic" src = "http://www.cs.ucsb.edu/~pconrad/dpea/lightsculpture/gifs/board.gif" onload = "go()" width = "0" height = "0">
+			
+			<!-- Canvas and Textarea: -->
+			<table id = "bigTable">
+				<tr>
+				<td>
+					<div id = "canvasDiv">
+						<canvas id = "arduinoPic" width = "332" height = "698"></canvas>
+					</div>
+				</td>
+				<td>
+				<div id = "textBox">
+					<textarea id = "copyZone">//C++ Code:
+void loop(){
+}</textarea>
+				</td>
+				<td>
+				<div id = "delay" class = "topButton">
+					<span id = "belay">Delay</span> <input type="number" id = "delayAmt" value = "1000"></input>
+				</div>
+				<div id = "start" class = "topButton">
+					Start
+				</div>
+				<div id = "stop" class = "topButton">
+					Stop
+				</div>
+				</td>
+				</div>
+				</tr>
+			</table>
+			
+			<!-- All dem switches: -->
+			<div class = "centerDiv">
+			<table id = "pinTable">
+				<th class = "pinHead">
+					<u>
+					Pin 2:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 3:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 4:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 5:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 6:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 7:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 8:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 9:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 10:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 11:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 12:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 13:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 14:
+				</th>
+				<th class = "pinHead">
+					<u>
+					Pin 15:
+				</th>
+				<tr>
+				<td class = "switches">
+					<div class = "high" name="2H">HIGH</div>
+					<div class = "low" name="2L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="3H">HIGH</div>
+					<div class = "low" name="3L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="4H">HIGH</div>
+					<div class = "low" name="4L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="5H">HIGH</div>
+					<div class = "low" name="5L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="6H">HIGH</div>
+					<div class = "low" name="6L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="7H">HIGH</div>
+					<div class = "low" name="7L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="8H">HIGH</div>
+					<div class = "low" name="8L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="9H">HIGH</div>
+					<div class = "low" name="9L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="10H">HIGH</div>
+					<div class = "low" name="10L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="11H">HIGH</div>
+					<div class = "low" name="11L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="12H">HIGH</div>
+					<div class = "low" name="12L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="13H">HIGH</div>
+					<div class = "low" name="13L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="14H">HIGH</div>
+					<div class = "low" name="14L">LOW</div>
+				</td>
+				<td class = "switches">
+					<div class = "high" name="15H">HIGH</div>
+					<div class = "low" name="15L">LOW</div>
+				</td>
+				</tr>
+			</table>
+			</div>
+		<div> <!-- container end -->
+	</body>
+</html>
